@@ -1,0 +1,13 @@
+
+name: nyc_airbnb_dev_data_split
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - mlflow
+      - wandb
+      - pandas
+      - numpy
+      - scikit-learn
