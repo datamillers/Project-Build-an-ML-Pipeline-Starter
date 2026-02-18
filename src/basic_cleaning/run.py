@@ -35,6 +35,16 @@ def go(args):
     # in the project.
     # Add longitude and latitude filter to allow test_proper_boundaries to pass
     # ENTER CODE HERE
+    # NYC geographic boundaries
+    min_lat, max_lat = 40.4774, 40.9176
+    min_lon, max_lon = -74.2591, -73.7004
+
+    df = df[
+        (df["latitude"] >= min_lat) &
+        (df["latitude"] <= max_lat) &
+        (df["longitude"] >= min_lon) &
+        (df["longitude"] <= max_lon)
+    ]
 
     # Save the cleaned data
     #df.to_csv('clean_sample.csv',index=False)
